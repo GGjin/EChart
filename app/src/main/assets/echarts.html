@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+    <meta charset="utf-8"/>
+    <style>
+        html, body {
+        height: 100%;
+        }
+        body {
+        background-color: #fff;
+        color: #fff;
+        font-family: "Microsoft YaHei";
+        }
+        .bg {
+        }
+        .item {
+        // padding: 30px 30px 50px;
+        }
+
+
+    </style>
+</head>
+<body style="height: 100%; margin: 0">
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main"
+     style="float: center; width: 350px;height:380px; margin-left: 20px;margin-bottom: 35px"></div>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript">
+ //声明Echarts实例
+   var myChart;
+
+   function createChart(json){
+        // 基于准备好的dom，初始化echarts实例
+      myChart = echarts.init(document.getElementById('main'));
+        //使用指定的配置项和数据显示图表。
+      myChart.setOption(json);
+    }
+
+</script>
+</body>
+</html>
